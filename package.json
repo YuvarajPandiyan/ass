@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/yup": "^0.29.13",
+    "dayjs": "^1.10.7",
     "formik": "^2.2.9",
     "formik-persist": "^1.1.0",
     "next": "12.0.1",

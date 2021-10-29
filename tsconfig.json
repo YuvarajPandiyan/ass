@@ -7,6 +7,9 @@
       ],
       "@components/*": [
         "components/*"
+      ],
+      "@apiType/*": [
+        "apiType/*"
       ]
     },
     "target": "es5",
