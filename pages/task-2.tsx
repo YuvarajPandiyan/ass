@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
 import { Sample } from "@apiType/sample";
-import Image from "next/image";
 import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 
 const END_PONT = "https://recruitingmonk-v2.azurewebsites.net/qna";
 
@@ -25,7 +24,16 @@ const TaskTwo = () => {
       });
 
       const response: Sample[] = await (
-        await fetch(END_PONT, { method: "GET" })
+        await fetch(END_PONT, {
+          method: "GET",
+          headers: {
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+            "Access-Control-Allow-Headers":
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+        })
       ).json();
 
       setFetchState((fetchState) => {
