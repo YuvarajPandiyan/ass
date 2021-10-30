@@ -22,7 +22,7 @@ module.exports = {
           { "sec-fetch-dest": "empty" },
           { "sec-fetch-mode": "cors" },
           { "sec-fetch-site": "cross - site" },
-          { "sec-gpc": 1 },
+          { "sec-gpc": "1" },
         ],
       },
     ];
