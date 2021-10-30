@@ -6,7 +6,7 @@ module.exports = {
     return [
       {
         // matching all routes
-        source: "/(.*)",
+        source: "/*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
@@ -19,6 +19,10 @@ module.exports = {
             value:
               "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
           },
+          { "sec-fetch-dest": empty },
+          { "sec-fetch-mode": cors },
+          { "sec-fetch-site": cross - site },
+          { "sec-gpc": 1 },
         ],
       },
     ];
