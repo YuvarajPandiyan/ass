@@ -19,10 +19,8 @@ module.exports = {
             value:
               "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
           },
-          { "sec-fetch-dest": "empty" },
           { "sec-fetch-mode": "cors" },
           { "sec-fetch-site": "cross - site" },
-          { "sec-gpc": "1" },
         ],
       },
     ];
