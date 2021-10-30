@@ -18,6 +18,9 @@ const TaskTwo = () => {
   });
 
   const handelAPiCall = async () => {
+    const header = new Headers();
+    header.append("Access-Control-Allow-Credentials", "true");
+    header.append("Access-Control-Allow-Origin", "*");
     try {
       setFetchState((fetchState) => {
         return { ...fetchState, loading: true };
@@ -26,13 +29,7 @@ const TaskTwo = () => {
       const response: Sample[] = await (
         await fetch(END_PONT, {
           method: "GET",
-          headers: {
-            "Access-Control-Allow-Credentials": "true",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-            "Access-Control-Allow-Headers":
-              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
-          },
+          headers: header,
         })
       ).json();
 
